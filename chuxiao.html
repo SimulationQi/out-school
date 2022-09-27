@@ -5,8 +5,14 @@
   <meta charset="UTF-8">
   <title>出校</title>
   <style>
-    img {
-      width: 30%;
+    .xiaoyuanka {
+      width: 40%;
+      display: block;
+      margin: 145px auto;
+      padding-top: 1.3rem;
+    }
+    .gou{
+      width: 20%;
       display: block;
       margin: 145px auto;
       padding-top: 1.3rem;
@@ -24,7 +30,7 @@
     }
 
     #p {
-      font-size: 90px;
+      font-size: 70px;
       font-weight: normal;
       text-align: center;
     }
@@ -39,19 +45,19 @@
 
   <div id="p">
     <p>出校</p>
-    <img src="xxj.jpg">
+    <img src="xxj.jpg" class="xiaoyuanka">
     <p>许兴健-201935010633</p>
     <hr >
     <p>
       学生：白名单验证通过，该申请离校扫码1次，离校码只能使用一次，请不要重复打开
     </p>
-    <img src="gou.jpg">
+    
   </div>
   <div id="time">
     <p id="mouthDay"></p>
     <p id="myclock"></p>
   </div>
-    <img src="gou.jpg">
+    <img src="gou.jpg" class="gou">
 
   <script>
     function show_time() {
@@ -62,7 +68,7 @@
       var min = time.getMinutes();
       var sec = time.getSeconds();
       var ss = time.getMilliseconds();
-      document.getElementById("mouthDay").innerHTML = "<p>" + checktime(month) + "-" + day;
+      // document.getElementById("mouthDay").innerHTML = "<p>" + checktime(month) + "-" + day;
       document.getElementById("myclock").innerHTML = "<p>" + checktime(hour) + ":" + checktime(min) + ":" + checktime(sec) + "." + ss;
     }
     //serInterval:以相同的时间间隔执行某个操作
