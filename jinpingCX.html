@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>出校</title>
+  <style>
+    .zhaopian{
+      width: 30%;
+      display: block;
+      margin: 5PX auto;
+      padding-top: 1.3rem;
+    }
+    .gou{
+      width: 20%;
+      display: block;
+      margin: 5PX auto;
+      padding-top: 1.3rem;
+    }
+    #time{
+      color: red;
+      text-align: center;
+      font-size: 85px;
+      font-weight: normal;
+      text-shadow: -1px 0 darkred,
+                   0 -1px darkred,
+                    1px 0 darkred,
+                    0 1px darkred;
+      margin: -60px auto;
+    }
+    #p{
+      font-size: 85px;
+      font-weight: normal;
+      text-align: center;
+      margin: -80px auto;
+    }
+        #h{
+                font-weight: normal;
+                text-align: center;
+                font-size: 40px;
+                margin: -40px auto;
+        }
+            #s{
+                     font-weight: normal;
+                     text-align: center;
+                     font-size: 85px;
+                     margin: -30px auto;
+                     margin: 40px;
+            }
+        
+  </style>
+</head>
+
+<body>
+  <div id="p">
+    <p> 
+      出校
+    </p >
+  </div>
+<img class="zhaopian" src="photo/yuanzhen.jpg">
+<div id="h">
+        <p >钟金萍-202230020449</p>
+</div>
+  <div id="h"> 
+  <p> 
+  <HR style="FILTER: progid:DXImageTransform.Microsoft.Glow(color=#A9A9A9,strength=10)" width="95%" color=#A9A9A9 SIZE=1>
+  </p >
+  <div id="s"> 
+  <p> 
+    学生:白名单验证通过,该申请离校扫码1次,离校码只能使用一次,请不要重复打开
+  </p >
+</div>
+<div id="time">
+  <p id="myclock"></p >
+</div>
+<img class="gou" src="photo/jingping.jpg">
+<script>
+  function show_time() {
+    var time=new Date();
+    var month=time.getMonth()+1;
+    var day=time.getDate();
+    var hour=time.getHours();
+    var min=time.getMinutes();
+    var sec=time.getSeconds();
+    var ss = time.getMilliseconds();
+    document.getElementById("myclock").innerHTML="<p>" +checktime(hour)+":"+checktime(min)+":"+checktime(sec)+"."+ss;
+  }
+  //serInterval:以相同的时间间隔执行某个操作
+  setInterval("show_time()",1);
+  function checktime(i){
+    if(i<10){
+      i="0"+ i
+    }
+    return i;
+  }
+</script>
+</body>
+</html>
